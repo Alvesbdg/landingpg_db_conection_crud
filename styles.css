@@ -1,0 +1,289 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color:darkblue;
+    color: #fff;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%; /* Membuat logo menjadi bulat */
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+/*
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}*/
+
+/* Style dasar untuk nav ul */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style untuk item menu */
+nav ul li {
+    margin-left: 20px;
+}
+
+/* Style untuk link di dalam menu */
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect: Mengubah warna background dan teks */ 
+/* Style untuk link navigasi */
+nav ul li a {
+    color: #ffffff; /* Warna teks menu */
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Warna background dan teks saat hover */
+nav ul li a:hover {
+    background-color: #007BFF; /* Warna background saat hover */
+    color: #ffffff; /* Warna teks saat hover */
+}
+
+
+
+.hero {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 5px 5px;
+    min-height: calc(100vh - 140px); /* Adjust for header and footer height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 5px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+
+/* About/Services */
+.about {
+    background-color: rgb(245, 245, 214);
+    padding: 10px 10px;
+    text-align: center;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.about h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.grid .item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid .item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.cta {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.cta:hover {
+    transform: scale(1.05);
+}
+
+/* CTA */
+/*.cta {
+    background-color: rgb(228, 245, 201);
+    padding: 50px 20px;
+    text-align: center;
+    animation: fadeInUp 2s ease-in-out;
+}*/
+
+.cta form {
+    max-width: 500px;
+    margin: 0 auto;
+    animation: fadeIn 2s forwards; 
+}
+
+.cta input, .cta textarea {
+    font-size: 18px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+}
+
+.cta input:focus, .cta textarea:focus {
+    box-shadow: 0 0 8px rgba(0, 0, 255, 0.5);
+}
+
+.cta label {
+    line-height: 2;
+    font-size: 18px; 
+    padding: 10px;  
+}
+
+
+.cta button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #0044cc;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta button:hover {
+    background-color: #0033aa;
+    transform: scale(1.05);
+}
+
+
+
+.content {
+    padding: 10px 20px;
+    text-align: center;
+}
+
+footer {
+    background-color:darkblue;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+}
+
+/* Animations */
+.animate-fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-slide-up {
+    transform: translateY(50px);
+    opacity: 0;
+    animation: slideUp 1.5s forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes slideUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsiveness */
+@media (min-width: 1440px) {
+    .hero h1 {
+        font-size: 72px;
+    }
+
+    .hero p {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 375px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .cta {
+        padding: 8px 16px;
+    }
+}
